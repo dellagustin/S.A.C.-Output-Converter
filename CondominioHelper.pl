@@ -3,7 +3,16 @@ use IO::File;
 sub trim($);
 sub parseLine($);
 
-$InFileHandler = IO::File->new($ARGV[0], "r");
+if($ARGV[0] ne "")
+{
+	$InFileHandler = IO::File->new($ARGV[0], "r");
+}
+else
+{
+	$InFileHandler = STDIN;
+}
+
+
 
 if(!defined $InFileHandler)
 { 
