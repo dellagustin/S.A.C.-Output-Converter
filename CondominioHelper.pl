@@ -1,3 +1,5 @@
+#!/usr/bin/perl
+
 use IO::File;
 
 sub trim($);
